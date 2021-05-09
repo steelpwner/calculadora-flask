@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <form action="/calculadora" method="POST">
+            <label>Número 1</label>
+            <input type="number" name="n1">
+            <br><br>
+            <label>Número 2</label>
+            <input type="number" name="n2">
+            <br><br>
+            <label>Operación</label>
+            <select name="operacion">
+                <option value="+">Suma</option>
+                <option value="-">Resta</option>
+                <option value="*">Multiplicación</option>
+                <option value="/">División</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Realizar operación">
+        </form>
+        <p>Resultado:</p>
+        <p>{{resultado}}</p>
+    </body>
+</html>
