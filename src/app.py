@@ -19,21 +19,23 @@ def calculo():
     return render_template("calculadora.html",resultado=calcular_operacion(n1,n2,operacion))
 
 def calcular_operacion(n1,n2,operacion):
+    resultado = "Resultado: "
     if verificar_numero(n1) and verificar_numero(n2):
         n1 = float(n1)
         n2 = float(n2)
         if operacion == "+":
-            return n1+n2
+            resultado += str(n1+n2)
         elif operacion == "-":
-            return n1-n2
+            resultado += str(n1-n2)
         elif operacion == "*":
-            return n1*n2
+            resultado += str(n1*n2)
         elif operacion == "/":
-            return n1/n2
+            resultado += str(n1/n2)
         else:
-            return "Operación inválida"
+            resultado = "Operación inválida"
     else:
-        return "Error en digitación de números"
+        resultado = "Error en digitación de números"
+    return resultado
 
 def verificar_numero(x):
     try:
