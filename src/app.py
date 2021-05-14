@@ -30,7 +30,10 @@ def calcular_operacion(n1,n2,operacion):
         elif operacion == "*":
             resultado += str(n1*n2)
         elif operacion == "/":
-            resultado += str(n1/n2)
+            if n2 != 0:
+                resultado += str(n1/n2)
+            else:
+                resultado = "Error, no se puede dividir entre cero"
         else:
             resultado = "Operación inválida"
     else:
